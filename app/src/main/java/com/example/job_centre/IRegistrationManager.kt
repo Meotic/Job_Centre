@@ -12,7 +12,6 @@ var index = 0
 
 class ArrayRegistrationManager: IRegistrationManager
 {
-    //коммент для проверки
     override fun PutData(login: String, password: String, uniq: String) {
         users.add(User(login, password, uniq))
     }
