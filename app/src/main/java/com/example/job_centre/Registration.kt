@@ -11,11 +11,21 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 
+open class  A{
+    open fun F() {
+
+    }
+}
+
+class  B : A() {
+     override fun F(){
+
+    }
+}
+
  class Registration : AppCompatActivity() {
 
     var Pref: SharedPreferences? = null
-
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +34,10 @@ import android.widget.EditText
     }
 
     fun ApplicantMe(view: View) {
+        //1. Создать базовый(: AppCompactActivity()) класс твоих всех активити
+        //2. Этот класс имеет метод abstract Initialization, где все твои виджеты появляются
+        //3. В базовом классе:
+            //обработка жизненных циклов активити(virtual/open)
         val password1 = findViewById<EditText>(R.id.editText2)
         val password2 = findViewById<EditText>(R.id.editText3)
         if (password1.text.toString() == password2.text.toString()) {
@@ -37,9 +51,10 @@ import android.widget.EditText
             val d_birth = findViewById<EditText>(R.id.editText7)
             val phone = findViewById<EditText>(R.id.editText8)
 
+            CurrentUser = User(email.text.toString(), password1.text.toString(), f_name.text.toString())
             val man: IRegistrationManager = ArrayRegistrationManager()
             man.PutData(email.text.toString(), password1.text.toString(), f_name.text.toString())
-            val ApplicantIntent = Intent(this, The_Applicant::class.java)
+            val ApplicantIntent = Intent(this, Applicant::class.java)
             startActivity(ApplicantIntent)
         }
         else {

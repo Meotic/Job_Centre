@@ -5,11 +5,14 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 
-class The_Applicant : AppCompatActivity() {
+class Applicant : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_the__applicant)
     }
 
-
+    fun SaveMe(view: View){
+        val WindowIntent = Intent(this, Window::class.java)
+        startActivity(WindowIntent)
+    }
 }

@@ -11,7 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
 
     fun RegistrationMe(view: View) {
@@ -22,5 +21,6 @@ class MainActivity : AppCompatActivity() {
     fun LoginMe(view: View) {
         val LoginIntent = Intent(this, Log_in::class.java)
         startActivity(LoginIntent)
+        this.finish()
     }
 }

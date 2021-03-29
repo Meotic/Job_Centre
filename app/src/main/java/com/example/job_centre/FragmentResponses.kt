@@ -14,7 +14,7 @@ class FragmentResponses : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_responses, container, false)
         val tv = view.findViewById<TextView>(R.id.textView3)
-        tv?.setText("Welcome, "+ users[index].uniq+"! This is Responses!")
+        tv?.setText("Welcome, "+ CurrentUser.uniq +"! This is Responses!")
         return view
     }
 

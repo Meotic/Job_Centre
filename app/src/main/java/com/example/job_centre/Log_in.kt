@@ -25,6 +25,7 @@ class Log_in : AppCompatActivity() {
         {
             val WindowIntent = Intent(this, Window::class.java)
             startActivity(WindowIntent)
+            this.finish()
         }
         else
         {

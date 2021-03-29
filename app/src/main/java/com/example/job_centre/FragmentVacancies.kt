@@ -14,7 +14,7 @@ class FragmentVacancies : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_vacancies, container, false)
         val tv = view.findViewById<TextView>(R.id.textView1)
-        tv?.setText("Welcome, "+ users[index].uniq+"! This is Vacancies!")
+        tv?.setText("Welcome, "+ CurrentUser.uniq +"! This is Vacancies!")
         return view
     }
 

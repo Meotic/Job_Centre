@@ -1,14 +1,16 @@
 package com.example.job_centre
 
+import java.io.Serializable
+
 interface IRegistrationManager {
     fun PutData(login: String, password: String, uniq: String)
     fun GetData(login: String, password: String): String?
 }
+lateinit var CurrentUser: User;
 
-data class User(val email: String, val password: String, val uniq: String)
-var us = User("qwa", "123", "Dar")
-var users = ArrayList<User>()
-var index = 0
+data class User(var email: String, var password: String, var uniq: String)
+
+var users = arrayListOf(User("email", "password", "fgjhkdfg"))
 
 class ArrayRegistrationManager: IRegistrationManager
 {
@@ -17,11 +19,10 @@ class ArrayRegistrationManager: IRegistrationManager
     }
 
     override fun GetData(login: String, password: String): String? {
-        users.add(us)
         for(i in 0..users.size-1)
             if (users[i].email == login && users[i].password == password) {
-                index = i
-                return users[i].uniq
+                CurrentUser = users[i];
+                return users[i].uniq;
             }
         return null
     }
