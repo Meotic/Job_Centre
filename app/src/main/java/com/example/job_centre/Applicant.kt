@@ -14,5 +14,6 @@ class Applicant : AppCompatActivity() {
     fun SaveMe(view: View){
         val WindowIntent = Intent(this, Window::class.java)
         startActivity(WindowIntent)
+        this.finish()
     }
 }

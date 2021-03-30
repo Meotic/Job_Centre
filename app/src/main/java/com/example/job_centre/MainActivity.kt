@@ -21,6 +21,10 @@ class MainActivity : AppCompatActivity() {
     fun LoginMe(view: View) {
         val LoginIntent = Intent(this, Log_in::class.java)
         startActivity(LoginIntent)
-        this.finish()
+    }
+    fun GuestMe(view: View){
+        CurrentUser = User("", "", "Guest")
+        val WindowIntent = Intent(this, Window::class.java)
+        startActivity(WindowIntent)
     }
 }

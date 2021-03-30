@@ -14,7 +14,7 @@ class FragmentProfile : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
         val tv = view.findViewById<TextView>(R.id.textView4)
-        tv?.setText("Welcome, "+ CurrentUser.uniq +"! This is Profile!")
+        tv?.setText("Welcome, "+ CurrentUser.name +"! This is Profile!")
         return view
     }
 }

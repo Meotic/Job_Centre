@@ -14,7 +14,7 @@ class FragmentFavorites : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_favorites, container, false)
         val tv = view.findViewById<TextView>(R.id.textView2)
-        tv?.setText("Welcome, "+ CurrentUser.uniq +"! This is Favorites!")
+        tv?.setText("Welcome, "+ CurrentUser.name +"! This is Favorites!")
         return view
     }
 
